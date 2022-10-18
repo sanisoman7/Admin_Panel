@@ -1,0 +1,87 @@
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}super_admin{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  
+    <header>
+            <nav class="navbar navbar-expand-lg" style="background-color: #d5e2eb;">
+
+
+            <div class="container-fluid">
+                
+                <a  class="navbar-brand" style=" padding-left: 50px;font-size: 30px;color: rgb(205, 187, 87);"  href="{% url 'super_admin_panel' %}">SUPER ADMIN PANEL </a>
+
+
+                <a href="{% url 'super_admin_panel' %}" style="color: #4b82a9;">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <h5 style="color: #4b82a9;">welcome,{{user.username}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5>
+                       <a href="{% url 'logout' %}" button class="btn btn-outline-info">Logout</button></a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+      
+      </header>
+</head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  
+
+    <br><br><br><br>
+    <pre></pre>
+    <div class="container">
+        <div class="card">
+        <div class="card-body" style="background-color:rgb(116, 195, 252);">
+            <div class="d-grid gap-2 col-6 mx-auto">
+            <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+                <a class="navbar-brand" href="{% url 'manager' %}">
+                        &nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+                        <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                        <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+                      </svg>&nbsp;&nbsp;
+                    Manager
+                </a>
+            </nav>
+            <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+                <a class="navbar-brand" href="{% url 'coordinator' %}">
+                    &nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-lines-fill" viewBox="0 0 16 16">
+                        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2z"/>
+                      </svg>&nbsp;&nbsp;
+                    Coordinator
+                </a>
+            </nav>
+            <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+                <a class="navbar-brand" href="{% url 'inspectors' %}">
+
+                    &nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-check-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                        <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                      </svg>&nbsp;&nbsp;
+                    Inspector
+                </a>
+            </nav>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>
